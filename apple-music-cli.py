@@ -36,8 +36,7 @@ class AppleMusicDriver():
 
     def sign_in(self):
         self.apple_id = input("Sign in with your Apple ID: ")
-        apple_id_input = wait(self.driver,
-                10).until(EC.presence_of_element_located((By.XPATH, "//input[@can-field='accountName']")))
+        apple_id_input = wait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, "//input[@can-field='accountName']")))
         #apple_id_input = self.driver.find_element_by_id("account_name_text_field")
         apple_id_input.send_keys(self.apple_id)
 
